@@ -1,0 +1,16 @@
+{% extends 'layout.html' %}
+
+{% block title %}
+<title>Edit the task: {{ todo.name }} </title>
+{% endblock %}
+
+{% block body %}
+    <h1>Edit the task: {{todo.name}} with deadline: {{todo.deadline}} </h1>
+    <div class="container">
+    <form action="" method="POST">
+        <input type="text" name="todo_name" placeholder="New task" value="{{ todo.name }}" class="form-control mx-sm-3 mb-2">
+        <!-- <input class="form-control" type="text" placeholder="New task" value="{{ todo.name }}"> -->
+        <button class="savebutton">Save</button>
+    </form>
+    </div>
+{% endblock%}
